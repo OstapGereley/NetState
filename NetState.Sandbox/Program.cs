@@ -8,9 +8,9 @@ using NetState.UsageExamples;
 
 namespace NetState.Sandbox {
 
-    class Program {
+    internal class Program {
 
-        static void Main(
+        private static void Main(
             string[] args) {
             EnsureDataGeneratorsMappingIsValid();
 
@@ -26,14 +26,8 @@ namespace NetState.Sandbox {
             params IStatementMetadata<int, int>[] statements) {
             foreach (var statement in statements) {
                 var statementProofResult = statement.TryProof(new OnlyTrueDataNTimesStatementProver(100)).Result;
-                if (statementProofResult.Success)
-                {
-                    "Statement proved.".PrintAsSuccess();
-                }
-                else
-                {
-                    $"Failed to prove statement:\r\n{statementProofResult.Info}\r\n".PrintAsError();
-                }
+                if (statementProofResult.Success) "Statement proved.".PrintAsSuccess();
+                else $"Failed to prove statement:\r\n{statementProofResult.Info}\r\n".PrintAsError();
             }
         }
 
@@ -47,9 +41,7 @@ namespace NetState.Sandbox {
                         string.Empty),
                     kvp.Value.GetType().Name.Replace(
                         "DataGenerator",
-                        string.Empty))).Where(kvp => kvp.Key != kvp.Value)) {
-                ("Predicate to data generator mapping is wrong: naming convention violated.\r\n" + $"{kvp.Key}Predicate was mapped to the {kvp.Value}DataGenerator...\r\n").PrintAsError();
-            }
+                        string.Empty))).Where(kvp => kvp.Key != kvp.Value)) ("Predicate to data generator mapping is wrong: naming convention violated.\r\n" + $"{kvp.Key}Predicate was mapped to the {kvp.Value}DataGenerator...\r\n").PrintAsError();
 
             "...done.".PrintAsNormal();
         }

@@ -8,7 +8,9 @@ namespace NetState.Core.Impl.Predicates.Chains {
 
         protected readonly PredicateBase<TArg> _rightPredicate;
 
-        protected BinaryChain(PredicateBase<TArg> leftPredicate, PredicateBase<TArg> rightPredicate) {
+        protected BinaryChain(
+            PredicateBase<TArg> leftPredicate,
+            PredicateBase<TArg> rightPredicate) {
             _leftPredicate = leftPredicate;
             _rightPredicate = rightPredicate;
         }

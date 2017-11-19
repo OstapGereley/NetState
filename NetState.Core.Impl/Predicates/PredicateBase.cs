@@ -7,12 +7,18 @@ namespace NetState.Core.Impl.Predicates {
 
     public abstract class PredicateBaseImpl<TArg> : PredicateBase<TArg> {
 
-        public override PredicateBase<TArg> And(PredicateBase<TArg> predicate) {
-            return new AndChain<TArg>(this, predicate);
+        public override PredicateBase<TArg> And(
+            PredicateBase<TArg> predicate) {
+            return new AndChain<TArg>(
+                this,
+                predicate);
         }
 
-        public override PredicateBase<TArg> Or(PredicateBase<TArg> predicate) {
-            return new OrChain<TArg>(this, predicate);
+        public override PredicateBase<TArg> Or(
+            PredicateBase<TArg> predicate) {
+            return new OrChain<TArg>(
+                this,
+                predicate);
         }
 
         public override PredicateBase<TArg> Not() {

@@ -9,12 +9,11 @@ namespace NetState.UsageExamples {
 
     public class Example {
 
-        public IStatementMetadata<int, int> ValidStatement()
-        {
-            return ((Func<int, int>)new SimpleExample().Add1Method)
-                            .DescribeStatementMetadata(
-                                new ParameterMetadata<int>(new NotZeroInt32Predicate()),
-                                new ParameterMetadata<int>(new NotZeroInt32Predicate()));
+        public IStatementMetadata<int, int> ValidStatement() {
+            return ((Func<int, int>) new SimpleExample().Add1Method)
+                .DescribeStatementMetadata(
+                    new ParameterMetadata<int>(new NotZeroInt32Predicate()),
+                    new ParameterMetadata<int>(new NotZeroInt32Predicate()));
         }
 
         public IStatementMetadata<int, int> InvalidStatement() {
@@ -23,6 +22,7 @@ namespace NetState.UsageExamples {
                     new ParameterMetadata<int>(new NotZeroInt32Predicate()),
                     new ParameterMetadata<int>(new NegativeInt32Predicate()));
         }
+
     }
 
 }

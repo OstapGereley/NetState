@@ -17,7 +17,9 @@ namespace NetState.Core.Impl.DataGenerators.Int32 {
 
         public override Task<int> NextTrue() {
             while (true) {
-                var randomInt32 = _random.Next(int.MinValue, int.MaxValue);
+                var randomInt32 = _random.Next(
+                    int.MinValue,
+                    int.MaxValue);
                 if (randomInt32 == 0) continue;
 
                 return Task.FromResult(randomInt32);

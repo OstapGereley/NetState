@@ -8,11 +8,13 @@ namespace NetState.Core.Impl.Predicates.Chains {
 
         private readonly PredicateBase<TArg> _predicate;
 
-        public NotChain(PredicateBase<TArg> predicate) {
+        public NotChain(
+            PredicateBase<TArg> predicate) {
             _predicate = predicate;
         }
 
-        public override async Task<bool> Eval(TArg arg) {
+        public override async Task<bool> Eval(
+            TArg arg) {
             return !await _predicate.Eval(arg);
         }
 

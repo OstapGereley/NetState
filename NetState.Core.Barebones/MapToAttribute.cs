@@ -4,7 +4,8 @@ namespace NetState.Core.Barebones {
 
     public class MapToAttribute : Attribute {
 
-        public MapToAttribute(Type predicateType) {
+        public MapToAttribute(
+            Type predicateType) {
             if (!predicateType.IsSubclassOf(typeof(TypeUnsafePredicateBase))) throw new ArgumentException();
 
             MappedWith = predicateType;

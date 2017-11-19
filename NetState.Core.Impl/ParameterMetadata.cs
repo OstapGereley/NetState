@@ -4,7 +4,8 @@ namespace NetState.Core.Impl {
 
     public class ParameterMetadata<TArg> : IParameterMetadata<TArg> {
 
-        public ParameterMetadata(PredicateBase<TArg> predicate) {
+        public ParameterMetadata(
+            PredicateBase<TArg> predicate) {
             Predicate = predicate;
         }
 

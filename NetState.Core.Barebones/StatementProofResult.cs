@@ -2,7 +2,9 @@
 
     public sealed class StatementProofResult {
 
-        private StatementProofResult(bool success, string info) {
+        private StatementProofResult(
+            bool success,
+            string info) {
             Success = success;
             Info = info;
         }
@@ -12,11 +14,16 @@
         public string Info { get; }
 
         public static StatementProofResult Successful() {
-            return new StatementProofResult(true, string.Empty);
+            return new StatementProofResult(
+                true,
+                string.Empty);
         }
 
-        public static StatementProofResult Failed(string errorInfo) {
-            return new StatementProofResult(false, errorInfo);
+        public static StatementProofResult Failed(
+            string errorInfo) {
+            return new StatementProofResult(
+                false,
+                errorInfo);
         }
 
     }

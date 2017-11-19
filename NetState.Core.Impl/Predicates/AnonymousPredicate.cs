@@ -7,11 +7,13 @@ namespace NetState.Core.Impl.Predicates {
 
         private readonly Func<TArg, Task<bool>> _predicate;
 
-        public AnonymousPredicate(Func<TArg, Task<bool>> predicate) {
+        public AnonymousPredicate(
+            Func<TArg, Task<bool>> predicate) {
             _predicate = predicate;
         }
 
-        public override Task<bool> Eval(TArg arg) {
+        public override Task<bool> Eval(
+            TArg arg) {
             return _predicate(arg);
         }
 

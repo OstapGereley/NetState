@@ -1,9 +1,5 @@
 ﻿namespace NetState.Core.Impl {
 
-    public static class Extensions {
-
-        
-
-    }
+    public static class Extensions { }
 
 }

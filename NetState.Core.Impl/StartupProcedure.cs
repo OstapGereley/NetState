@@ -15,10 +15,10 @@ namespace NetState.Core.Impl {
                 GetType()
                     .Assembly
                     .ExportedTypes.Where(exportedType => exportedType.GetCustomAttribute(typeof(MapToAttribute)) != null).ToList().ToDictionary(
-                        dataGeneratorType => ((MapToAttribute)Attribute.GetCustomAttribute(
+                        dataGeneratorType => ((MapToAttribute) Attribute.GetCustomAttribute(
                             dataGeneratorType,
                             typeof(MapToAttribute))).MappedWith,
-                        type => (TypeUnsafeDataGeneratorBase)Activator.CreateInstance(type)));
+                        type => (TypeUnsafeDataGeneratorBase) Activator.CreateInstance(type)));
         }
 
     }
