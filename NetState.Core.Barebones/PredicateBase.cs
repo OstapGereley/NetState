@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +7,11 @@ namespace NetState.Core.Barebones
 {
     public abstract class PredicateBase<TArg> {
 
-        public abstract bool Eval(TArg arg);
+        public abstract Task<bool> Eval(TArg arg);
+
+        public Task<PredicateBase<TArg>> Reverse() {
+            return Task.FromResult<PredicateBase<TArg>>(new AnonymousPredicate<TArg>(async arg => !await Eval(arg)));
+        }
 
     }
 
