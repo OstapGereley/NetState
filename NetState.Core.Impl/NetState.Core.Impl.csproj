@@ -40,7 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Int32\InBetweenIntervalInt32Predicate.cs" />
+    <Compile Include="Predicates\Int32\InBetweenIntervalInt32Predicate.cs" />
     <Compile Include="Predicates\Int32\Int32PredicateBase.cs" />
     <Compile Include="Predicates\Int32\NegativeInt32Predicate.cs" />
     <Compile Include="Predicates\Int32\NotZeroInt32Predicate.cs" />

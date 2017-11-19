@@ -1,8 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-using NetState.Core.Impl.Predicates.Int32;
-
-namespace NetState.Core.Impl.Int32
+namespace NetState.Core.Impl.Predicates.Int32
 {
     public sealed class InBetweenIntervalInt32Predicate : Int32PredicateBase {
 
