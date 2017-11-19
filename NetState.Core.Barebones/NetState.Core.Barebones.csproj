@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="AnonymousPredicate.cs" />
     <Compile Include="DataGeneratorFactory.cs" />
+    <Compile Include="StatementEvaluationResult.cs" />
     <Compile Include="IStatementEvaluator.cs" />
     <Compile Include="StatementMetadatas\INotVoidStatementMetadata.cs" />
     <Compile Include="IParameterMetadata.cs" />
