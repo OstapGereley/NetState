@@ -1,11 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-using NetState.Core.Barebones;
-
 namespace NetState.Core.Impl.Predicates {
 
-    public sealed class AnonymousPredicate<TArg> : PredicateBase<TArg> {
+    public sealed class AnonymousPredicate<TArg> : PredicateBaseImpl<TArg> {
 
         private readonly Func<TArg, Task<bool>> _predicate;
 

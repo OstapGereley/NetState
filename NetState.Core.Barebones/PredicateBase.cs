@@ -2,7 +2,7 @@
 
 namespace NetState.Core.Barebones {
 
-    public abstract class PredicateBase<TArg> {
+    public abstract class PredicateBase<TArg> : TypeUnsafePredicateBase {
 
         public abstract Task<bool> Eval(TArg arg);
 

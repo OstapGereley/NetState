@@ -1,8 +1,18 @@
 ﻿namespace NetState.Core.Barebones {
 
-    public interface IDataGeneratorFactory<TArg> {
+    public interface ITypeUnsafeDataGeneratorFactory {
 
-        DataGeneratorBase<TArg> For<TPredicate>(TPredicate predicateType) where TPredicate : PredicateBase<TArg>;
+        TypeUnsafeDataGeneratorBase For<TPredicate>(
+            TPredicate predicateType)
+            where TPredicate : TypeUnsafePredicateBase;
+
+    }
+
+    public interface IDataGeneratorFactory<TArg> : ITypeUnsafeDataGeneratorFactory {
+
+        new DataGeneratorBase<TArg> For<TPredicate>(
+            TPredicate predicateType)
+            where TPredicate : PredicateBase<TArg>;
 
     }
 

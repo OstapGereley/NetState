@@ -2,7 +2,7 @@
 
 namespace NetState.Core.Barebones {
 
-    public abstract class DataGeneratorBase<TArg> {
+    public abstract class DataGeneratorBase<TArg> : TypeUnsafeDataGeneratorBase {
 
         public abstract Task<TArg> NextTrue();
 

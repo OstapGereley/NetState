@@ -58,6 +58,7 @@
     <Compile Include="Predicates\PredicateBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="DataGenerators\Int32\NotZeroInt32DataGenerator.cs" />
+    <Compile Include="StartupProcedure.cs" />
     <Compile Include="StatementEvaluator.cs" />
     <Compile Include="StatementMetadatas\ExtensionMethods.cs" />
     <Compile Include="StatementMetadatas\NotVoidStatementMetadata.cs" />

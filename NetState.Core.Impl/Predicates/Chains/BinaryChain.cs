@@ -2,7 +2,7 @@
 
 namespace NetState.Core.Impl.Predicates.Chains {
 
-    public abstract class BinaryChain<TArg> : PredicateBase<TArg> {
+    public abstract class BinaryChain<TArg> : PredicateBaseImpl<TArg> {
 
         protected readonly PredicateBase<TArg> _leftPredicate;
 

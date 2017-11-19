@@ -1,21 +1,29 @@
-﻿using NetState.Core.Barebones;
+﻿using System.Threading.Tasks;
+
+using NetState.Core.Barebones;
 using NetState.Core.Impl.Predicates.Chains;
 
 namespace NetState.Core.Impl.Predicates {
 
     public abstract class PredicateBaseImpl<TArg> : PredicateBase<TArg> {
 
-        public PredicateBase<TArg> And(PredicateBase<TArg> predicate) {
+        public override PredicateBase<TArg> And(PredicateBase<TArg> predicate) {
             return new AndChain<TArg>(this, predicate);
         }
 
-        public PredicateBase<TArg> Or(PredicateBase<TArg> predicate) {
+        public override PredicateBase<TArg> Or(PredicateBase<TArg> predicate) {
             return new OrChain<TArg>(this, predicate);
         }
 
-        public PredicateBase<TArg> Not() {
+        public override PredicateBase<TArg> Not() {
             return new NotChain<TArg>(this);
         }
+
+        public override Task<bool> Eval(
+            object arg) {
+            return Eval((TArg) arg);
+        }
+
     }
 
 }

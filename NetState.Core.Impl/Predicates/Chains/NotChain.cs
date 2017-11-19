@@ -4,7 +4,7 @@ using NetState.Core.Barebones;
 
 namespace NetState.Core.Impl.Predicates.Chains {
 
-    public sealed class NotChain<TArg> : PredicateBase<TArg> {
+    public sealed class NotChain<TArg> : PredicateBaseImpl<TArg> {
 
         private readonly PredicateBase<TArg> _predicate;
 
