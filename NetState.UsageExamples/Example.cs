@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Threading.Tasks;
 
-using NetState.Core.Barebones;
 using NetState.Core.Barebones.StatementMetadatas;
 using NetState.Core.Impl;
 using NetState.Core.Impl.Predicates.Int32;
