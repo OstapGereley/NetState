@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using NetState.Core.Barebones;
 using NetState.Core.Impl.Predicates.Int32;
 
-namespace NetState.Core.Impl.TestDataGenerators.Int32 {
+namespace NetState.Core.Impl.DataGenerators.Int32 {
 
     [MapTo(typeof(NotZeroInt32Predicate))]
     public class NotZeroInt32DataGenerator : DataGeneratorBase<int> {
