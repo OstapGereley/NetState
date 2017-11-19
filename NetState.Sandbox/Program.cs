@@ -25,7 +25,7 @@ namespace NetState.Sandbox {
         private static void TryProveStatements(
             params IStatementMetadata<int, int>[] statements) {
             foreach (var statement in statements) {
-                var statementProofResult = statement.TryProof(new OnlyTrueDataNTimesStatementEvaluator(100)).Result;
+                var statementProofResult = statement.TryProof(new OnlyTrueDataNTimesStatementProver(100)).Result;
                 if (statementProofResult.Success)
                 {
                     "Statement proved.".PrintAsSuccess();

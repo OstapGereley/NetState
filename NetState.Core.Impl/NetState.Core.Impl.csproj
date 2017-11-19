@@ -42,7 +42,7 @@
   <ItemGroup>
     <Compile Include="DataGeneratorFactory.cs" />
     <Compile Include="Extensions.cs" />
-    <Compile Include="OnlyTrueDataNTimesStatementEvaluator.cs" />
+    <Compile Include="OnlyTrueDataNTimesStatementProver.cs" />
     <Compile Include="ParameterMetadata.cs" />
     <Compile Include="Predicates\AnonymousPredicate.cs" />
     <Compile Include="Predicates\Chains\AndChain.cs" />

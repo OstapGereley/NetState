@@ -4,7 +4,7 @@ using NetState.Core.Barebones.StatementMetadatas;
 
 namespace NetState.Core.Barebones {
 
-    public interface IStatementEvaluator {
+    public interface IStatementProver {
 
         Task<StatementProofResult> Eval<TArg1, TResult>(IStatementMetadata<TArg1, TResult> statement);
 

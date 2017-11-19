@@ -5,11 +5,11 @@ using NetState.Core.Barebones.StatementMetadatas;
 
 namespace NetState.Core.Impl {
 
-    public abstract class NTimesStatementEvaluator : IStatementEvaluator {
+    public abstract class NTimesStatementProver : IStatementProver {
 
         protected readonly uint _timesToRun;
 
-        protected NTimesStatementEvaluator(uint timesToRun) {
+        protected NTimesStatementProver(uint timesToRun) {
             _timesToRun = timesToRun;
         }
 

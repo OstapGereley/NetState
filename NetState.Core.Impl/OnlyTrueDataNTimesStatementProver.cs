@@ -5,9 +5,9 @@ using NetState.Core.Barebones.StatementMetadatas;
 
 namespace NetState.Core.Impl {
 
-    public sealed class OnlyTrueDataNTimesStatementEvaluator : NTimesStatementEvaluator {
+    public sealed class OnlyTrueDataNTimesStatementProver : NTimesStatementProver {
 
-        public OnlyTrueDataNTimesStatementEvaluator(uint timesToRun) : base(timesToRun) { }
+        public OnlyTrueDataNTimesStatementProver(uint timesToRun) : base(timesToRun) { }
 
         public override async Task<StatementProofResult> Eval<TArg1, TResult>(IStatementMetadata<TArg1, TResult> statement) {
             var statementDataGenerator = DataGeneratorFactory.For(statement.Argument1.Predicate);

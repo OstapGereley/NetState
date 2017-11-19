@@ -17,8 +17,8 @@ namespace NetState.Core.Impl.StatementMetadatas {
 
         public Func<TArg1, TResultult> Method { get; }
 
-        public override async Task<StatementProofResult> TryProof(IStatementEvaluator statementEvaluator) {
-            return await statementEvaluator.Eval(this);
+        public override async Task<StatementProofResult> TryProof(IStatementProver statementProver) {
+            return await statementProver.Eval(this);
         }
 
     }

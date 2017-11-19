@@ -42,7 +42,7 @@
   <ItemGroup>
     <Compile Include="DataGeneratorFactory.cs" />
     <Compile Include="StatementProofResult.cs" />
-    <Compile Include="IStatementEvaluator.cs" />
+    <Compile Include="IStatementProver.cs" />
     <Compile Include="StatementMetadatas\INotVoidStatementMetadata.cs" />
     <Compile Include="IParameterMetadata.cs" />
     <Compile Include="StatementMetadatas\IStatementMetadata_1Arg.cs" />

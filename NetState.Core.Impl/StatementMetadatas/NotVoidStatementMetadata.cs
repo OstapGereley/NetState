@@ -13,7 +13,7 @@ namespace NetState.Core.Impl.StatementMetadatas {
 
         public IParameterMetadata<TResultult> Result { get; }
 
-        public abstract Task<StatementProofResult> TryProof(IStatementEvaluator statementEvaluator);
+        public abstract Task<StatementProofResult> TryProof(IStatementProver statementProver);
 
     }
 
