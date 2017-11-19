@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace NetState.Core.Barebones
 {
-    public class Class1
-    {
+    public abstract class PredicateBase<TArg> {
+
+        public abstract bool Eval(TArg arg);
+
     }
+
 }
