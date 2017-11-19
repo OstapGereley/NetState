@@ -40,7 +40,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataGeneratorFactory.cs" />
     <Compile Include="StatementProofResult.cs" />
     <Compile Include="IStatementProver.cs" />
     <Compile Include="StatementMetadatas\INotVoidStatementMetadata.cs" />
