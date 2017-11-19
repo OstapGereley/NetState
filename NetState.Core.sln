@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26430.16
+VisualStudioVersion = 15.0.26430.14
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetState.Core.Barebones", "NetState.Core.Barebones\NetState.Core.Barebones.csproj", "{5ED21AE8-29DD-4F02-9689-2C4AC5A02A1F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetSatate.UI", "NetSatate.UI\NetSatate.UI.csproj", "{D5CD452D-70CA-40DB-AD92-F0D07519C603}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{5ED21AE8-29DD-4F02-9689-2C4AC5A02A1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5ED21AE8-29DD-4F02-9689-2C4AC5A02A1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5ED21AE8-29DD-4F02-9689-2C4AC5A02A1F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5CD452D-70CA-40DB-AD92-F0D07519C603}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5CD452D-70CA-40DB-AD92-F0D07519C603}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5CD452D-70CA-40DB-AD92-F0D07519C603}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5CD452D-70CA-40DB-AD92-F0D07519C603}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
