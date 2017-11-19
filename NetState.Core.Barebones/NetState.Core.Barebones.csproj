@@ -42,6 +42,7 @@
   <ItemGroup>
     <Compile Include="AnonymousPredicate.cs" />
     <Compile Include="IParameterMetadata.cs" />
+    <Compile Include="IStatementMetadata.cs" />
     <Compile Include="PredicateBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TestDataGeneratorBase.cs" />
