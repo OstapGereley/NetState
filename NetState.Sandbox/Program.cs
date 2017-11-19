@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 
 using NetState.Core.Impl;
+using NetState.UsageExamples;
 
 namespace NetState.Sandbox {
 
@@ -11,7 +12,7 @@ namespace NetState.Sandbox {
         static void Main(
             string[] args) {
             EnsureDataGeneratorsMappingIsValid();
-
+            new Example().StatementDeclaration(tryTimes: 100).Wait();
             Console.Read();
         }
 

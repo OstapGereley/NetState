@@ -57,6 +57,10 @@
       <Project>{47482C2C-CDCA-4E12-BAAC-E72A0385802A}</Project>
       <Name>NetState.Core.Impl</Name>
     </ProjectReference>
+    <ProjectReference Include="..\NetState.UsageExamples\NetState.UsageExamples.csproj">
+      <Project>{82148B1E-8366-4CB3-9409-B497C1221E9E}</Project>
+      <Name>NetState.UsageExamples</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

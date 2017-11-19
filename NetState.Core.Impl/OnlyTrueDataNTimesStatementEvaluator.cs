@@ -10,7 +10,7 @@ namespace NetState.Core.Impl {
         public OnlyTrueDataNTimesStatementEvaluator(uint timesToRun) : base(timesToRun) { }
 
         public override async Task<StatementEvaluationResult> Eval<TArg1, TRes>(IStatementMetadata<TArg1, TRes> statement) {
-            var statementDataGenerator = DataGeneratorFactoryFactory.For<TArg1>().For(statement.Argument1.Predicate);
+            var statementDataGenerator = DataGeneratorFactory.For(statement.Argument1.Predicate);
 
             for (var i = 0; i < _timesToRun; i++) {
                 var trueData = await statementDataGenerator.NextTrue();
