@@ -1,8 +1,6 @@
-﻿using System.Collections.Generic;
+﻿namespace NetState.Core.Barebones {
 
-namespace NetState.Core.Barebones {
-
-    public interface IParameterMetadata<T> : IEnumerable<T> {
+    public interface IParameterMetadata<T> {
 
         PredicateBase<T> Predicate { get; }
 
