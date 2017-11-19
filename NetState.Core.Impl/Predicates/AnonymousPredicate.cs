@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace NetState.Core.Barebones {
+using NetState.Core.Barebones;
+
+namespace NetState.Core.Impl.Predicates {
 
     public sealed class AnonymousPredicate<TArg> : PredicateBase<TArg> {
 
