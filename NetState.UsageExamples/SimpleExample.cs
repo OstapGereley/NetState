@@ -1,8 +1,8 @@
 ﻿namespace NetState.UsageExamples {
 
-    public class CustomClass {
+    public class SimpleExample {
 
-        public int CustomMethod(int parameter) {
+        public int Add1Method(int parameter) {
             return parameter + 1;
         }
 

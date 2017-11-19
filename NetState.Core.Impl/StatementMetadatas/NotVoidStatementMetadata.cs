@@ -5,15 +5,15 @@ using NetState.Core.Barebones.StatementMetadatas;
 
 namespace NetState.Core.Impl.StatementMetadatas {
 
-    public abstract class NotVoidStatementMetadata<TResult> : INotVoidStatementMetadata<TResult> {
+    public abstract class NotVoidStatementMetadata<TResultult> : INotVoidStatementMetadata<TResultult> {
 
-        protected NotVoidStatementMetadata(IParameterMetadata<TResult> result) {
+        protected NotVoidStatementMetadata(IParameterMetadata<TResultult> result) {
             Result = result;
         }
 
-        public IParameterMetadata<TResult> Result { get; }
+        public IParameterMetadata<TResultult> Result { get; }
 
-        public abstract Task<StatementEvaluationResult> TryProof(IStatementEvaluator statementEvaluator);
+        public abstract Task<StatementProofResult> TryProof(IStatementEvaluator statementEvaluator);
 
     }
 

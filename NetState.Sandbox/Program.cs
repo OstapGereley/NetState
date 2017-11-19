@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
+using NetState.Core.Barebones.StatementMetadatas;
 using NetState.Core.Impl;
 using NetState.UsageExamples;
 
@@ -12,13 +13,32 @@ namespace NetState.Sandbox {
         static void Main(
             string[] args) {
             EnsureDataGeneratorsMappingIsValid();
-            new Example().StatementDeclaration(tryTimes: 100).Wait();
+
+            TryProveStatements(
+                new Example().ValidStatement(),
+                new Example().InvalidStatement());
+
+            "End of the execution.".PrintAsNormal();
             Console.Read();
         }
 
+        private static void TryProveStatements(
+            params IStatementMetadata<int, int>[] statements) {
+            foreach (var statement in statements) {
+                var statementProofResult = statement.TryProof(new OnlyTrueDataNTimesStatementEvaluator(100)).Result;
+                if (statementProofResult.Success)
+                {
+                    "Statement proved.".PrintAsSuccess();
+                }
+                else
+                {
+                    $"Failed to prove statement:\r\n{statementProofResult.Info}\r\n".PrintAsError();
+                }
+            }
+        }
+
         private static void EnsureDataGeneratorsMappingIsValid() {
-            Console.WriteLine("Validating predicates -> data generatos mapping...");
-            Console.ForegroundColor = ConsoleColor.Red;
+            "Validating predicates -> data generatos mapping...".PrintAsNormal();
             var dataGeneratorsMap = new StartupProcedure().MapDataGenerators();
             foreach (var kvp in dataGeneratorsMap.Select(
                 kvp => new KeyValuePair<string, string>(
@@ -26,13 +46,12 @@ namespace NetState.Sandbox {
                         "Predicate",
                         string.Empty),
                     kvp.Value.GetType().Name.Replace(
-                        "DataGenerator", 
+                        "DataGenerator",
                         string.Empty))).Where(kvp => kvp.Key != kvp.Value)) {
-                Console.WriteLine($"Predicate to data generator mapping is wrong: naming convention violated.\r\n" + $"{kvp.Key}Predicate was mapped to the {kvp.Value}DataGenerator...\r\n");
+                ("Predicate to data generator mapping is wrong: naming convention violated.\r\n" + $"{kvp.Key}Predicate was mapped to the {kvp.Value}DataGenerator...\r\n").PrintAsError();
             }
 
-            Console.ForegroundColor = ConsoleColor.Gray;
-            Console.WriteLine("...done.");
+            "...done.".PrintAsNormal();
         }
 
     }

@@ -6,7 +6,7 @@ namespace NetState.Core.Barebones.StatementMetadatas {
 
         IParameterMetadata<R> Result { get; }
 
-        Task<StatementEvaluationResult> TryProof(IStatementEvaluator statementEvaluator);
+        Task<StatementProofResult> TryProof(IStatementEvaluator statementEvaluator);
 
     }
 

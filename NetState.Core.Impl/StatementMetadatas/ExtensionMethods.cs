@@ -7,11 +7,11 @@ namespace NetState.Core.Impl.StatementMetadatas {
 
     public static class ExtensionMethods {
 
-        public static IStatementMetadata<TArg, TResult> DescribeStatementMetadata<TArg, TResult>(
-            this Func<TArg, TResult> func, 
+        public static IStatementMetadata<TArg, TResultult> DescribeStatementMetadata<TArg, TResultult>(
+            this Func<TArg, TResultult> func, 
             IParameterMetadata<TArg> argumentMetadata, 
-            IParameterMetadata<TResult> resultMetadata) {
-            return new StatementMetadata<TArg, TResult>(resultMetadata, func, argumentMetadata);
+            IParameterMetadata<TResultult> resultMetadata) {
+            return new StatementMetadata<TArg, TResultult>(resultMetadata, func, argumentMetadata);
         }
 
     }
