@@ -1,4 +1,4 @@
-﻿namespace NetState.Core.Barebones
+﻿namespace NetState.Core.Barebones.StatementMetadatas
 {
     public interface INotVoidStatementMetadata<R>
     {

@@ -1,4 +1,4 @@
-﻿namespace NetState.Core.Barebones.IStatementMetadata
+﻿namespace NetState.Core.Barebones.StatementMetadatas
 {
     public interface IStatementMetadata<Arg1, Arg2, Arg3, Arg4, Arg5, Arg6, Arg7, Arg8, R> : INotVoidStatementMetadata<R>
     {
@@ -12,7 +12,7 @@
 
         IParameterMetadata<Arg5> Argument5 { get; }
 
-        IParameterMetadata<Arg7> Argument6 { get; }
+        IParameterMetadata<Arg6> Argument6 { get; }
 
         IParameterMetadata<Arg7> Argument7 { get; }
 
