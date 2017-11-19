@@ -13,7 +13,7 @@ namespace NetState.UsageExamples {
             var proofResult = await ((Func<int, int>) new CustomClass()
                     .CustomMethod)
                 .DescribeStatementMetadata(
-                    new ParameterMetadata<int>(new PositiveInt32Predicate()),
+                    new ParameterMetadata<int>(new NegativeInt32Predicate().And(new StrictlyZeroInt32Predicate()).Not()),
                     new ParameterMetadata<int>(new PositiveInt32Predicate()))
                 .TryProof(new OnlyTrueDataNTimesStatementEvaluator(1000));
 

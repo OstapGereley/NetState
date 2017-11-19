@@ -6,6 +6,12 @@ namespace NetState.Core.Barebones {
 
         public abstract Task<bool> Eval(TArg arg);
 
+        public abstract PredicateBase<TArg> And(PredicateBase<TArg> predicate);
+
+        public abstract PredicateBase<TArg> Or(PredicateBase<TArg> predicate);
+
+        public abstract PredicateBase<TArg> Not();
+
     }
 
 }
