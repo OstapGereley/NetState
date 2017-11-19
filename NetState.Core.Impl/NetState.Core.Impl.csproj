@@ -47,6 +47,7 @@
     <Compile Include="Predicates\Int32\PositiveInt32Predicate.cs" />
     <Compile Include="Predicates\Int32\StrictlyZeroInt32Predicate.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TestDataGenerators\Int32\NotZeroInt32DataGenerator.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NetState.Core.Barebones\NetState.Core.Barebones.csproj">

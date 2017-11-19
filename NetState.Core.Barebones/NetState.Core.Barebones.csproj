@@ -41,10 +41,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnonymousPredicate.cs" />
+    <Compile Include="DataGeneratorFactory.cs" />
     <Compile Include="IParameterMetadata.cs" />
+    <Compile Include="MapToAttribute.cs" />
     <Compile Include="PredicateBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestDataGeneratorBase.cs" />
+    <Compile Include="DataGeneratorBase.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
