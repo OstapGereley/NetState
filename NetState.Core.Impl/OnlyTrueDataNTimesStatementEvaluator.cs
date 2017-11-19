@@ -1,6 +1,5 @@
 ﻿using System.Threading.Tasks;
 
-using NetState.Core.Barebones;
 using NetState.Core.Barebones.StatementMetadatas;
 
 namespace NetState.Core.Impl {
@@ -10,11 +9,10 @@ namespace NetState.Core.Impl {
         public OnlyTrueDataNTimesStatementEvaluator(uint timesToRun) : base(timesToRun) { }
 
         public override async Task<bool> Eval<TArg1, TRes>(IStatementMetadata<TArg1, TRes> statement) {
-            var intDataGeneratorFactory = default(IDataGeneratorFactory<TArg1>);
-            var statementDataGenerators = intDataGeneratorFactory.For(statement.Argument1.Predicate);
+            var statementDataGenerator = DataGeneratorFactoryFactory.For<TArg1>().For(statement.Argument1.Predicate);
 
             for (var i = 0; i < _timesToRun; i++) {
-                var res = statement.Method(await statementDataGenerators.NextTrue());
+                var res = statement.Method(await statementDataGenerator.NextTrue());
                 if (!await statement.Result.Predicate.Eval(res)) {
                     return false;
                 }

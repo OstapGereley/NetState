@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace NetState.Core.Barebones {
+﻿namespace NetState.Core.Barebones {
 
     public interface IDataGeneratorFactory<TArg> {
 

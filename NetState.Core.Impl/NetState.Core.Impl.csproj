@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataGeneratorFactoryFactory.cs" />
     <Compile Include="OnlyTrueDataNTimesStatementEvaluator.cs" />
     <Compile Include="Predicates\Int32\InBetweenIntervalInt32Predicate.cs" />
     <Compile Include="Predicates\Int32\Int32PredicateBase.cs" />
